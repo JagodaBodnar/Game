@@ -1,0 +1,40 @@
+{
+  "name": "Dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init-project": "npm install && npm run init:dirs && npm run init:files && npm run init:gitignore",
+    "init:dirs": "mkdir sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "build": "npm run build:sass && npm run build:autoprefixer",
+    "build-clean": "rm -rf css/*css",
+    "build:sass": "node-sass scss/style.scss -o css",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch": "npm-run-all build -p watch:*",
+    "watch:sassprefixer": "onchange -d 100 sass/style.scss -- node-sass --output-style expanded --source-map true -o css sass && autoprefixer-cli -o css/style.css",
+    "watch:browser-sync": "browser-sync start --server --files 'css/*.css' 'index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JagodaBodnar/Dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JagodaBodnar/Dashboard/issues"
+  },
+  "homepage": "https://github.com/JagodaBodnar/Dashboard#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.5",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "globstar": "^1.0.0",
+    "onchange": "^6.0.0"
+  }
+}

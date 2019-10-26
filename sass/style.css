@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+body {
+	padding: 10px;
+	text-align: center;
+  background-color:  #141518;
+}
+.fas{
+  font-size: 50px;
+}
+.fa-times{
+  font-size: 20px;
+  padding: 0;
+}
+.choose{
+  display: flex;
+  justify-content: center;
+  width: 1500px;
+}
+.alerts{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 80px;
+  width: 500px;
+  margin: 20px 50px;
+  border: 2px solid #024A26;
+  border-radius: 30px;
+}
+
+.player-move {
+    outline: none;
+    padding: 11px 50px; 
+    width: 200px;
+    height: 200px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #024A26;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #DBDEE5;
+    border:none;
+}
+.white-back{
+  background-color: #fff;
+}
+.new-game-button{
+  width: 10%;
+  margin-top: 20px;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #002217;
+  border:none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  color: #d3dbe1;
+  cursor: pointer;
+  outline: none;
+}
+.okay{
+  background-color: #fff;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #002217;
+  border:none;
+}
+
+.okay:hover {
+  background-color: #024A26;
+  color: white;
+}
+h1, .round-number{
+  margin-top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  color: #DBDEE5;
+  margin-right: 30px;
+}
+.result, .output, .score, table{
+  margin-top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  color: #DBDEE5;
+}
+table{
+  color:#141518;
+}
+.result{
+  color: #024A26;
+  font-size: 25px;
+}
+
+h1{
+  color: #e0cfc0;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.modal {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 30px;
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+th, td{
+  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  width: 150px;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-container div{
+  margin: 5px;
+}
+.form-container input{
+  margin-left: 5px;
+}
+.background{
+  background-color: #021409;
+  color: #FFFFFF;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.start{
+  background-color: #B88309;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 10px;
+}

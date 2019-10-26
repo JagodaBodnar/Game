@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <h1>Choose rock, paper or scissors.</h1>
+    
+    
+    <div class="choose" id="choose">
+      <div class="alerts">
+      <div class="round-number" id="round-number"></div>
+    <div id="output" class="output"></div>
+     <div id="score" class="score"></div>
+    </div>
+      <button class="player-move" id="rock-button" data-move="rock"><i class="fas fa-hand-rock"></i></button>
+      <button class="player-move" id="paper-button" data-move="paper"><i class="fas fa-hand-paper"></i></button>
+      <button class="player-move" id="scissors-button" data-move="scissors"><i class="fas fa-hand-scissors"></i></button>
+    </div>
+    
+    
+    
+    <div class="newgame">
+       <button class="new-game-button" id="new-game">New game</button>
+    </div>
+    
+    
+    
+    <div class="overlay" id="overlay">
+      <div class="modal" id="player-move">
+        <div class="btn-close close"><i class="fas fa-times"></i></div>
+        <div id="result" class="result"></div>
+        <table id="table">
+          <thead>
+            <th>Round</th>
+            <th>Player Move</th>
+            <th>Computer Move</th>
+            <th>Winner</th>
+            <th>Game result</th>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="modal background" id="new-game-button">
+        <div class="btn-close close"><i class="fas fa-times"></i></div>
+        <form>
+          <div class="form-container">
+            <div> Name: <input type="text" name="pname" id="name"></div>
+            <div>How many rounds you want to play? <input type="number" min="1" id="rounds" validate></div>
+          <button type="button" class="start close" id="start">Start</button>
+          </div>
+        </form>
+      </div>
+    </div>    
+    
+    <script src="../js/script.js"></script>
+  </body>
+</html>
+
