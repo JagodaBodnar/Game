@@ -35,13 +35,13 @@ params.roundsNumber--;
 if(params.roundsNumber === 0){
   createTable();
   if (params.playerScore > params.computerScore) {
-  result.innerHTML ='You won the entire game!';
+  result.innerText ='You won the entire game!';
   }
   else if(params.playerScore < params.computerScore){
-   result.innerHTML ='You lost. Try luck again!';
+   result.innerText ='You lost. Try luck again!';
   }
   else {
-  result.innerHTML ='Draw!';
+  result.innerText ='Draw!';
   }
 }
 else {
